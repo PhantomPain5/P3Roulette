@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Roulette : MonoBehaviour
 {
@@ -10,15 +12,18 @@ public class Roulette : MonoBehaviour
     private Rigidbody2D rbody;
     int inRotate;
 
+   
 
     private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        
     }
 
     float t;
     private void Update()
     {
+        
 
         if (rbody.angularVelocity > 0)
         {
@@ -59,17 +64,17 @@ public class Roulette : MonoBehaviour
         if (rot > 0 + 22 && rot <= 45 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 45);
-            Win(200);
+            Win(0);
         }
         else if (rot > 45 + 22 && rot <= 90 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 90);
-            Win(300);
+            Win(5000);
         }
         else if (rot > 90 + 22 && rot <= 135 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 135);
-            Win(400);
+            Win(100);
         }
         else if (rot > 135 + 22 && rot <= 180 + 22)
         {
@@ -79,22 +84,22 @@ public class Roulette : MonoBehaviour
         else if (rot > 180 + 22 && rot <= 225 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 225);
-            Win(600);
+            Win(0);
         }
         else if (rot > 225 + 22 && rot <= 270 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 270);
-            Win(700);
+            Win(0);
         }
         else if (rot > 270 + 22 && rot <= 315 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 315);
-            Win(800);
+            Win(1000);
         }
         else if (rot > 315 + 22 && rot <= 360 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 0);
-            Win(100);
+            Win(0);
         }
 
     }
