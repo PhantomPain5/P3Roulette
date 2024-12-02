@@ -11,6 +11,7 @@ public class Roulette : MonoBehaviour
 
     private Rigidbody2D rbody;
     int inRotate;
+    
 
    
 
@@ -89,7 +90,7 @@ public class Roulette : MonoBehaviour
         else if (rot > 225 + 22 && rot <= 270 + 22)
         {
             GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, 270);
-            Win(0);
+            Win(100);
         }
         else if (rot > 270 + 22 && rot <= 315 + 22)
         {
